@@ -7,7 +7,6 @@ import { parseStringify } from "../utils";
 
 export const signIn = async ({ email, password }: signInProps) => {
   try {
-    console.log("Fasil");
     const { account } = await createAdminClient();
     const response = await account.createEmailPasswordSession(email, password);
 
