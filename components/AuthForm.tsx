@@ -48,10 +48,10 @@ const AuthForm = ({ type }: AuthFormProps) => {
 
     try {
       // signup with appwrite & create a plaid link token
-
       if (type === "sign-up") {
         const newUser = await signUp(data);
-        // setUser(newUser)
+
+        setUser(newUser);
       }
 
       if (type === "sign-in") {
@@ -60,7 +60,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
           password: data.password,
         });
 
-        // if (response) router.push("/");
+        if (response) router.push("/");
       }
     } catch (error) {
       console.log(error);
