@@ -30,11 +30,12 @@ const RecentTransactions = ({
               <BankTabItem
                 key={account.id}
                 account={account}
-                appwriteItemId={account.appwriteItemId}
+                appwriteItemId={appwriteItemId}
               />
             </TabsTrigger>
           ))}
         </TabsList>
+
         {accounts.map((account: Account) => (
           <TabsContent
             value={account.appwriteItemId}
