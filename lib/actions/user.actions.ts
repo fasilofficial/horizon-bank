@@ -32,7 +32,7 @@ export const getUserInfo = async ({ userId }: getUserInfoProps) => {
 
     return parseStringify(user.documents[0]);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -147,7 +147,7 @@ export const createLinkToken = async (user: User) => {
 
     return parseStringify({ linkToken: response.data.link_token });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -260,7 +260,7 @@ export const getBanks = async ({ userId }: getBanksProps) => {
 
     return parseStringify(banks.documents);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -276,6 +276,6 @@ export const getBank = async ({ documentId }: getBankProps) => {
 
     return parseStringify(bank.documents[0]);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
